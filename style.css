@@ -11,7 +11,7 @@ body {
 }
 
 #main {
-  margin: 0 30px 30px;
+  margin: 0 60px 60px;
 }
 
 ul {
@@ -43,3 +43,27 @@ h2 {
   margin-top: 20px;
   flex: 1;
 }
+
+/* Nav-bar */
+
+nav li {
+  padding-top: 40px;
+}
+
+nav li a:hover {
+  color: #0065fc;
+  border-top: 3px solid #0065fc;
+  padding-top: 37px;
+}
+
+nav a {
+  padding: 40px 30px 0;
+}
+
+#signUp {
+  padding: 40px 30px 0;
+  color: #0065fc;
+  font-weight: 800;
+}
+
+/* Header */
