@@ -11,7 +11,7 @@ body {
 }
 
 #main {
-  margin: 0 60px 60px;
+  margin: 0 50px 50px;
 }
 
 ul {
@@ -39,8 +39,13 @@ h2 {
 
 /* Header */
 
+header {
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
 #headerLogo {
-  margin-top: 20px;
+  margin-top: 30px;
   flex: 1;
 }
 
@@ -52,8 +57,8 @@ nav li {
 
 nav li a:hover {
   color: #0065fc;
-  border-top: 3px solid #0065fc;
-  padding-top: 37px;
+  border-top: 2px solid #0065fc;
+  padding-top: 38px;
 }
 
 nav a {
@@ -66,4 +71,120 @@ nav a {
   font-weight: 800;
 }
 
-/* Header */
+/* Search-bar */
+
+.search {
+  margin-bottom: 30px;
+}
+
+.search h2 {
+  margin-bottom: 10px;
+}
+.search p {
+  margin-top: 10px;
+}
+
+.searchBar {
+  margin-bottom: 30px;
+  height: 50px;
+}
+
+.searchBar::placeholder {
+  color: #c2c2c2;
+}
+
+.searchContainer {
+  margin-bottom: 30px;
+  height: 50px;
+}
+
+.mapMarker {
+  background-color: #f2f2f2;
+  border-radius: 15px 0 0 15px;
+  width: 50px;
+  flex-shrink: 0;
+}
+
+.mapMarker i {
+  margin: auto;
+  font-size: 1.2rem;
+}
+.searchInput::placeholder {
+  color: #f2f2f2;
+}
+
+.searchButton {
+  width: 130px;
+  background-color: #0065fc;
+  border: none;
+  padding: 0;
+  border-radius: 0 15px 15px 0;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.searchButton i {
+  display: none;
+}
+
+/* Filtres */
+
+.filterContainer {
+  flex-wrap: wrap;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 30px;
+}
+
+.textFilter {
+  align-self: center;
+}
+
+.filterContent {
+  flex-wrap: wrap;
+}
+
+.filterList span {
+  padding-left: 12px;
+}
+
+.filterList {
+  align-items: center;
+  height: 46px;
+  border: 2px solid #f2f2f2;
+  border-left: none;
+  margin-left: 20px;
+  padding-right: 20px;
+  border-radius: 25px;
+}
+
+.iconFilter {
+  position: relative;
+  right: 1px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #deebff;
+}
+
+.iconFilter i {
+  margin: auto;
+  color: #0065fc;
+}
+
+.iconInfo {
+  height: 20px;
+  width: 20px;
+  border: 1px solid #f2f2f2;
+  border-radius: 1rem;
+  margin-right: 10px;
+}
+
+.iconInfo i {
+  margin: auto;
+  font-size: 0.9rem;
+  color: #0065fc;
+}
