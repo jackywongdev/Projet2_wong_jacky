@@ -161,6 +161,12 @@ nav a {
   border-radius: 25px;
 }
 
+.filterList:hover {
+  cursor: pointer;
+  border-color: #0065fc;
+  color: #0065fc;
+}
+
 .iconFilter {
   position: relative;
   right: 1px;
@@ -188,3 +194,5 @@ nav a {
   font-size: 0.9rem;
   color: #0065fc;
 }
+
+/* Hébergements */
