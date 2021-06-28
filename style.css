@@ -96,7 +96,7 @@ nav a {
 
 .search-bar {
   height: 50px;
-  border: 1px solid #f2f2f2;
+  border: 2px solid #f2f2f2;
   padding: 0 0 0 15px;
   font-size: 1.1rem;
   font-weight: 600;
@@ -104,7 +104,7 @@ nav a {
 }
 
 .search-bar::placeholder {
-  color: #131313;
+  color: #302f2f;
   font-size: 1.4rem;
 }
 
@@ -115,7 +115,6 @@ nav a {
 }
 
 .map-marker {
-  background-color: #f2f2f2;
   border-radius: 15px 0 0 15px;
   width: 50px;
   flex-shrink: 0;
@@ -126,8 +125,9 @@ nav a {
   font-size: 1.2rem;
   cursor: pointer;
 }
-.search-input::placeholder {
-  color: #111;
+
+.map-marker:hover {
+  color: #0065fc;
 }
 
 .search-button {
@@ -140,7 +140,10 @@ nav a {
   font-weight: 600;
   font-size: 1.1rem;
   cursor: pointer;
-  flex-shrink: 0;
+}
+
+.search-button:hover {
+  opacity: 0.8;
 }
 
 .search-button i {
@@ -171,7 +174,7 @@ nav a {
 .filter-list {
   align-items: center;
   height: 46px;
-  border: 2px solid #d1d1d1;
+  border: 2px solid #f2f2f249;
   border-left: none;
   margin-left: 20px;
   padding-right: 20px;
@@ -201,8 +204,9 @@ nav a {
 .icon-info {
   height: 20px;
   width: 20px;
-  border: 1px solid #d1d1d1;
+  border: 3px solid #fff;
   border-radius: 1rem;
+  color: #f2f2f2;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -217,18 +221,22 @@ nav a {
 
 .main-container {
   display: flex;
-  margin: 25px 0 50px;
+  margin: 70px 0 50px;
 }
 
 .lodging-section,
 .popular-section {
-  background-color: #c1c1c1;
+  background-color: #f2f2f2;
   border-radius: 20px;
   padding: 15px;
 }
 
-.lodging-section > h2 {
+.lodging-section h2 {
   margin: 0;
+}
+
+.lodging-section h2:hover {
+  opacity: 0.7;
 }
 
 .lodging-section {
@@ -249,10 +257,15 @@ nav a {
   width: auto;
   grid-template-rows: 1fr 40%;
   box-sizing: border-box;
-  border: 5px solid #fff;
+  border: 5px solid #f2f2f2;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 7px #c1c1c1;
+  box-shadow: 0 0 7px #f2f2f2;
+}
+
+.lodging-content:hover {
+  box-shadow: 1px 1px 15px #0065fc;
+  transition-duration: 0.4s;
 }
 
 .lodging-content img {
@@ -288,21 +301,34 @@ nav a {
 }
 
 .greyStar {
-  color: #d1d1d1;
+  color: #f2f2f2;
 }
 
 #show-more {
   font-weight: 700;
   font-size: 1.3rem;
+  padding-top: 500px;
+}
+
+#show-more:hover {
+  color: #0065fc;
 }
 
 /* Populaires */
+
+.fa-chart-line:hover {
+  color: #0065fc;
+}
 
 .popular-section {
   position: relative;
   width: 30%;
   margin-left: 50px;
   padding: 15px 40px;
+}
+
+.popular-section h2:hover {
+  opacity: 0.6;
 }
 
 .popular-icon {
@@ -324,10 +350,16 @@ nav a {
   border: 5px solid #fff;
   border-radius: 15px;
   margin-bottom: 30px;
-  box-shadow: 0 0 7px #c1c1c1;
+  box-shadow: 0 0 7px #f2f2f2;
   box-sizing: border-box;
   overflow: hidden;
 }
+
+.popular-content:hover {
+  box-shadow: 1px 1px 15px #0065fc;
+  transition-duration: 0.4s;
+}
+
 .popular-content p {
   margin-top: 4px;
 }
@@ -352,6 +384,14 @@ nav a {
 }
 
 /* Activités */
+
+.activities-section {
+  margin-top: 100px;
+}
+
+.activities-section h2:hover {
+  opacity: 0.7;
+}
 
 .activities-container {
   display: grid;
@@ -383,8 +423,13 @@ nav a {
   box-sizing: content-box;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 7px #c1c1c1;
+  box-shadow: 0 0 7px #f2f2f2;
   background-color: #f2f2f2;
+}
+
+.activities-content:hover {
+  box-shadow: 1px 1px 15px #0065fc;
+  transition-duration: 0.4s;
 }
 
 .activities-content img {
@@ -420,3 +465,34 @@ nav a {
 }
 
 /* Footer */
+
+footer {
+  margin-top: 100px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  text-decoration: none;
+}
+.footer-content {
+  width: 300px;
+  padding-right: 100px;
+}
+
+.footer-content h3:hover {
+  opacity: 0.7;
+}
+
+.footer-content li:hover {
+  font-weight: bold;
+}
+
+.footer-content h3 {
+  padding-bottom: 25px;
+}
+
+.footer-content li {
+  padding-bottom: 10px;
+}
