@@ -5,13 +5,8 @@
 /* Général */
 
 body {
-  margin: 0;
   box-sizing: border-box;
   font-family: "Raleway", sans-serif;
-}
-
-#main {
-  margin: 0 50px 50px;
 }
 
 ul {
@@ -22,18 +17,33 @@ ul {
 
 a {
   text-decoration: none;
+  margin-block-start: 0;
+  margin-block-end: 0;
   color: inherit;
 }
 
 h2 {
   font-weight: 700;
+  padding: none;
+  margin: none;
+}
+
+h3 {
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  justify-content: stretch;
 }
 
 .flex {
   display: flex;
 }
 
-.pricetext {
+.price-text {
   font-weight: 600;
 }
 
@@ -44,8 +54,8 @@ header {
   margin-bottom: 35px;
 }
 
-#headerLogo {
-  margin-top: 30px;
+#header-logo {
+  margin-top: 25px;
   flex: 1;
 }
 
@@ -65,7 +75,7 @@ nav a {
   padding: 40px 30px 0;
 }
 
-#signUp {
+#sign-up {
   padding: 40px 30px 0;
   color: #0065fc;
   font-weight: 800;
@@ -84,36 +94,43 @@ nav a {
   margin-top: 10px;
 }
 
-.searchBar {
+.search-bar {
+  height: 50px;
+  border: 1px solid #f2f2f2;
+  padding: 0 0 0 15px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  width: 230px;
+}
+
+.search-bar::placeholder {
+  color: #131313;
+  font-size: 1.4rem;
+}
+
+.search-container {
   margin-bottom: 30px;
   height: 50px;
+  padding: 15px 0 10px;
 }
 
-.searchBar::placeholder {
-  color: #c2c2c2;
-}
-
-.searchContainer {
-  margin-bottom: 30px;
-  height: 50px;
-}
-
-.mapMarker {
+.map-marker {
   background-color: #f2f2f2;
   border-radius: 15px 0 0 15px;
   width: 50px;
   flex-shrink: 0;
 }
 
-.mapMarker i {
+.map-marker i {
   margin: auto;
   font-size: 1.2rem;
+  cursor: pointer;
 }
-.searchInput::placeholder {
-  color: #f2f2f2;
+.search-input::placeholder {
+  color: #111;
 }
 
-.searchButton {
+.search-button {
   width: 130px;
   background-color: #0065fc;
   border: none;
@@ -126,48 +143,48 @@ nav a {
   flex-shrink: 0;
 }
 
-.searchButton i {
+.search-button i {
   display: none;
 }
 
 /* Filtres */
 
-.filterContainer {
+.filter-container {
   flex-wrap: wrap;
   font-weight: 700;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
   margin-bottom: 30px;
 }
 
-.textFilter {
+.text-filter {
   align-self: center;
 }
 
-.filterContent {
+.filter-content {
   flex-wrap: wrap;
 }
 
-.filterList span {
+.filter-list span {
   padding-left: 12px;
 }
 
-.filterList {
+.filter-list {
   align-items: center;
   height: 46px;
-  border: 2px solid #f2f2f2;
+  border: 2px solid #d1d1d1;
   border-left: none;
   margin-left: 20px;
   padding-right: 20px;
   border-radius: 25px;
 }
 
-.filterList:hover {
+.filter-list:hover {
   cursor: pointer;
   border-color: #0065fc;
   color: #0065fc;
 }
 
-.iconFilter {
+.icon-filter {
   position: relative;
   right: 1px;
   width: 50px;
@@ -176,23 +193,230 @@ nav a {
   background-color: #deebff;
 }
 
-.iconFilter i {
+.icon-filter i {
   margin: auto;
   color: #0065fc;
 }
 
-.iconInfo {
+.icon-info {
   height: 20px;
   width: 20px;
-  border: 1px solid #f2f2f2;
+  border: 1px solid #d1d1d1;
   border-radius: 1rem;
   margin-right: 10px;
+  cursor: pointer;
 }
 
-.iconInfo i {
+.icon-info i {
   margin: auto;
   font-size: 0.9rem;
   color: #0065fc;
 }
 
 /* Hébergements */
+
+.main-container {
+  display: flex;
+  margin: 25px 0 50px;
+}
+
+.lodging-section,
+.popular-section {
+  background-color: #c1c1c1;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+.lodging-section > h2 {
+  margin: 0;
+}
+
+.lodging-section {
+  width: 60%;
+}
+
+.lodging-container {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 30px;
+  margin: 30px 0 50px;
+  padding: 15px;
+}
+
+.lodging-content {
+  display: grid;
+  height: 220px;
+  width: auto;
+  grid-template-rows: 1fr 40%;
+  box-sizing: border-box;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 7px #c1c1c1;
+}
+
+.lodging-content img {
+  width: 100%;
+  height: 126px;
+  object-fit: cover;
+}
+
+.lodging-info {
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: #fff;
+  padding: 5px 10px;
+}
+
+.lodging-info p {
+  margin: 0;
+}
+
+.hotel-rank {
+  word-spacing: -1ch;
+}
+
+.fa-star {
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  margin: 0;
+  padding: 0;
+}
+
+.blueStar {
+  color: #0065fc;
+}
+
+.greyStar {
+  color: #d1d1d1;
+}
+
+#show-more {
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+/* Populaires */
+
+.popular-section {
+  position: relative;
+  width: 30%;
+  margin-left: 50px;
+  padding: 15px 40px;
+}
+
+.popular-icon {
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.popular-icon h2 {
+  margin-top: 0;
+  margin-bottom: 25px;
+}
+
+.popular-icon i {
+  font-size: 1.5rem;
+}
+
+.popular-content {
+  height: 145px;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 0 7px #c1c1c1;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.popular-content p {
+  margin-top: 4px;
+}
+
+.popular-content img {
+  width: 200px;
+  height: 170px;
+  object-fit: cover;
+}
+
+.popular-info {
+  flex: 1;
+  background-color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.ppopular-info .popular-name + p {
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+/* Activités */
+
+.activities-container {
+  display: grid;
+  width: 100%;
+  grid-template: repeat(12, 1fr) / repeat(4, 1fr);
+  gap: 36px;
+  height: 550px;
+  grid-auto-flow: column;
+  justify-content: center;
+  padding: 30px;
+}
+
+.row12 {
+  grid-row-end: span 13;
+}
+
+.row6 {
+  grid-row-end: span 7;
+}
+
+.row5 {
+  grid-row-end: span 6;
+}
+
+.activities-content {
+  display: grid;
+  grid-template-rows: 1fr 60px;
+  height: 100%;
+  box-sizing: content-box;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 7px #c1c1c1;
+  background-color: #f2f2f2;
+}
+
+.activities-content img {
+  width: 100%;
+  object-fit: cover;
+}
+
+#activities-img-01 {
+  height: 503px;
+}
+#activities-img-02 {
+  height: 237px;
+}
+#activities-img-03 {
+  height: 182px;
+}
+#activities-img-04 {
+  height: 504px;
+}
+#activities-img-05 {
+  height: 192px;
+}
+#activities-img-06 {
+  height: 229px;
+}
+
+.activities-title {
+  align-self: center;
+  background-color: #fff;
+  padding: 0 0 10px 16px;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* Footer */
