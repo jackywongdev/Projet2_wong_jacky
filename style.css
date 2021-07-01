@@ -6,6 +6,8 @@
 
 body {
   box-sizing: border-box;
+  align-content: center;
+  width: auto;
   font-family: "Raleway", sans-serif;
 }
 
@@ -174,7 +176,6 @@ nav a {
 .filter-list {
   align-items: center;
   height: 46px;
-  border: 2px solid #f2f2f249;
   border-left: none;
   margin-left: 20px;
   padding-right: 20px;
@@ -260,7 +261,7 @@ nav a {
   border: 5px solid #f2f2f2;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 7px #f2f2f2;
+  box-shadow: 0 0 7px #afaeae;
 }
 
 .lodging-content:hover {
@@ -301,13 +302,12 @@ nav a {
 }
 
 .greyStar {
-  color: #f2f2f2;
+  color: #776e6e60;
 }
 
 #show-more {
   font-weight: 700;
   font-size: 1.3rem;
-  padding-top: 500px;
 }
 
 #show-more:hover {
@@ -346,11 +346,11 @@ nav a {
 }
 
 .popular-content {
-  height: 145px;
+  height: 170px;
   border: 5px solid #fff;
   border-radius: 15px;
   margin-bottom: 30px;
-  box-shadow: 0 0 7px #f2f2f2;
+  box-shadow: 0 0 7px #afaeae;
   box-sizing: border-box;
   overflow: hidden;
 }
@@ -386,6 +386,7 @@ nav a {
 /* Activités */
 
 .activities-section {
+  width: auto;
   margin-top: 100px;
 }
 
@@ -401,7 +402,6 @@ nav a {
   height: 550px;
   grid-auto-flow: column;
   justify-content: center;
-  padding: 30px;
 }
 
 .row12 {
@@ -418,12 +418,12 @@ nav a {
 
 .activities-content {
   display: grid;
-  grid-template-rows: 1fr 60px;
+  grid-template-rows: 1fr 50px;
   height: 100%;
-  box-sizing: content-box;
+  box-sizing: border;
   border-radius: 15px;
   overflow: hidden;
-  box-shadow: 0 0 7px #f2f2f2;
+  box-shadow: 0 0 7px #c1c1c1;
   background-color: #f2f2f2;
 }
 
@@ -467,18 +467,17 @@ nav a {
 /* Footer */
 
 footer {
+  display: flex;
   margin-top: 100px;
 }
 
 .footer-container {
-  display: flex;
   justify-content: space-evenly;
   list-style: none;
   text-decoration: none;
 }
 .footer-content {
   width: 300px;
-  padding-right: 100px;
 }
 
 .footer-content h3:hover {
@@ -495,4 +494,144 @@ footer {
 
 .footer-content li {
   padding-bottom: 10px;
+}
+
+/* Media queries */
+
+@media screen and (max-width: 1114px) {
+  .main-container {
+    display: block;
+  }
+
+  .lodging-section {
+    flex: 1.5;
+    width: auto;
+  }
+
+  .popular-section {
+    display: block;
+    width: auto;
+    padding: 26px;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .text-filter {
+    padding-bottom: 20px;
+  }
+
+  .filter-list {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .lodging-container {
+    max-width: auto;
+    margin: 0 auto;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .activities-container {
+    grid-template: repeat(6, 1fr) / 1fr;
+    grid-auto-flow: initial;
+    gap: 10px;
+    height: auto;
+  }
+
+  .activities-content {
+    height: 190px;
+    margin: 26px;
+  }
+
+  #activities-img-01 {
+    height: 184px;
+  }
+  #activities-img-02 {
+    height: 185px;
+  }
+  #activities-img-03 {
+    height: 188px;
+  }
+  #activities-img-04 {
+    height: 187px;
+  }
+  #activities-img-05 {
+    height: 192px;
+  }
+  #activities-img-06 {
+    height: 188px;
+  }
+
+  .activities-title {
+    height: 90px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    width: auto;
+    padding-left: 60px;
+  }
+
+  .footer-content {
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  header {
+    flex-direction: column;
+  }
+
+  .nav-bar {
+    order: 3;
+  }
+
+  .nav-bar ul {
+    width: 100%;
+  }
+
+  .nav-bar li {
+    width: 50%;
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 3px solid #f2f2f2;
+  }
+
+  #sign-up {
+    align-self: flex-end;
+    padding: 0;
+    margin-right: 20px;
+    position: relative;
+    bottom: 30px;
+  }
+
+  nav li a:hover {
+    color: #0065fc;
+    border-bottom: 2px solid #0065fc;
+    padding-top: 38px;
+    border-top: none;
+  }
+
+  .search-bar {
+    flex: 1;
+  }
+  .search-button i {
+    display: inline-block;
+  }
+  .search-button span {
+    display: none;
+  }
+  .search-button {
+    position: relative;
+    width: 50px;
+    border-radius: 15px;
+    left: -20px;
+  }
+
+  .footer-content {
+  }
 }
