@@ -1,6 +1,6 @@
 # Projet2_wong_jacky
 OpenClassrooms projet 2
-Projet 2 "Reservia", Openclassrooms.
+
 
 # Reservia
 
