@@ -4,6 +4,11 @@
 
 /* Général */
 
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   box-sizing: border-box;
   align-content: center;
@@ -19,15 +24,13 @@ ul {
 
 a {
   text-decoration: none;
-  margin-block-start: 0;
-  margin-block-end: 0;
   color: inherit;
 }
 
 h2 {
   font-weight: 700;
-  padding: none;
-  margin: none;
+  padding: 0;
+  margin: 0;
 }
 
 h3 {
@@ -67,10 +70,9 @@ nav li {
   padding-top: 40px;
 }
 
-nav li a:hover {
+nav li:hover {
   color: #0065fc;
-  border-top: 2px solid #0065fc;
-  padding-top: 38px;
+  border-top: 3px solid #0065fc;
 }
 
 nav a {
@@ -83,6 +85,10 @@ nav a {
   font-weight: 800;
 }
 
+#sign-up:hover {
+  color: #000;
+}
+
 /* Search-bar */
 
 .search {
@@ -90,10 +96,11 @@ nav a {
 }
 
 .search h2 {
+  padding-left: 10px;
   margin-bottom: 10px;
 }
 .search p {
-  margin-top: 10px;
+  margin: 10px 0 0 10px;
 }
 
 .search-bar {
@@ -113,13 +120,14 @@ nav a {
 .search-container {
   margin-bottom: 30px;
   height: 50px;
-  padding: 15px 0 10px;
+  padding: 15px 0 10px 10px;
 }
 
 .map-marker {
   border-radius: 15px 0 0 15px;
   width: 50px;
   flex-shrink: 0;
+  background-color: #f2f2f2;
 }
 
 .map-marker i {
@@ -163,6 +171,7 @@ nav a {
 
 .text-filter {
   align-self: center;
+  padding-left: 10px;
 }
 
 .filter-content {
@@ -180,6 +189,7 @@ nav a {
   margin-left: 20px;
   padding-right: 20px;
   border-radius: 25px;
+  border: 2px solid rgb(235, 235, 235);
 }
 
 .filter-list:hover {
@@ -190,7 +200,7 @@ nav a {
 
 .icon-filter {
   position: relative;
-  right: 1px;
+  right: 3px;
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -202,12 +212,16 @@ nav a {
   color: #0065fc;
 }
 
+.info-container {
+  padding-left: 10px;
+  align-items: center;
+}
+
 .icon-info {
   height: 20px;
   width: 20px;
-  border: 3px solid #fff;
+  border: 3px solid #f2f2f2;
   border-radius: 1rem;
-  color: #f2f2f2;
   margin-right: 10px;
   cursor: pointer;
 }
@@ -387,7 +401,11 @@ nav a {
 
 .activities-section {
   width: auto;
-  margin-top: 100px;
+  margin: 100px 10px 0;
+}
+
+.activities-section h2 {
+  padding-bottom: 25px;
 }
 
 .activities-section h2:hover {
@@ -420,7 +438,6 @@ nav a {
   display: grid;
   grid-template-rows: 1fr 50px;
   height: 100%;
-  box-sizing: border;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0 0 7px #c1c1c1;
@@ -472,9 +489,11 @@ footer {
 }
 
 .footer-container {
+  display: flex;
   justify-content: space-evenly;
   list-style: none;
   text-decoration: none;
+  padding-left: 10px;
 }
 .footer-content {
   width: 300px;
@@ -500,7 +519,9 @@ footer {
 
 @media screen and (max-width: 1114px) {
   .main-container {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 20px;
   }
 
   .lodging-section {
@@ -514,22 +535,24 @@ footer {
     padding: 26px;
     margin: 0;
   }
+  .activities-section,
+  footer {
+    margin-top: 35px;
+  }
 }
 
 @media screen and (max-width: 1050px) {
   .text-filter {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
   }
 
-  .filter-list {
-    padding-bottom: 20px;
+  .filter-content {
+    gap: 15px;
   }
 }
 
 @media screen and (max-width: 955px) {
   .lodging-container {
-    max-width: auto;
-    margin: 0 auto;
     display: grid;
     grid-gap: 1rem;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -544,7 +567,7 @@ footer {
 
   .activities-content {
     height: 190px;
-    margin: 26px;
+    margin: 10px 27px;
   }
 
   #activities-img-01 {
@@ -573,7 +596,7 @@ footer {
   .footer-container {
     flex-direction: column;
     width: auto;
-    padding-left: 60px;
+    padding-left: 50px;
   }
 
   .footer-content {
@@ -609,10 +632,9 @@ footer {
     bottom: 30px;
   }
 
-  nav li a:hover {
+  nav li:hover {
     color: #0065fc;
-    border-bottom: 2px solid #0065fc;
-    padding-top: 38px;
+    border-bottom: 3px solid #0065fc;
     border-top: none;
   }
 
@@ -630,8 +652,5 @@ footer {
     width: 50px;
     border-radius: 15px;
     left: -20px;
-  }
-
-  .footer-content {
   }
 }
